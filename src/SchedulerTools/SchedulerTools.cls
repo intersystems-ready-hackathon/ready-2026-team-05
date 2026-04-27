@@ -13,7 +13,7 @@ Method AddPerson(firstname As %String, lastname As %String, dob As %Date, candri
 }
 
 /// Tool query database for list of appointment for a person
-Query GetAppointmentsForPerson(person As Data.Person, startDateTime As %TimeStamp, endDateTime As %TimeSTamp) As %SQLQuery(
+Query GetAppointmentsForPerson(person As Data.Person, startDateTime As %TimeStamp, endDateTime As %TimeStamp) As %SQLQuery(
     ROWSPEC = "Name:%String,Age:%Integer") [ SqlProc ]
 {
     SELECT ApptName, 
@@ -21,7 +21,7 @@ Query GetAppointmentsForPerson(person As Data.Person, startDateTime As %TimeStam
         DATEDIFF(YEAR, ForPerson->DOB, GETDATE()) - CASE WHEN MONTH(ForPerson->DOB) > MONTH(GETDATE()) OR (MONTH(ForPerson->DOB) = MONTH(GETDATE()) AND DAY(ForPerson->DOB) > DAY(GETDATE())) THEN 1 ELSE 0 END AS age
     FROM Data.Appointment
     Where ForPerson->FirstName = :person.FirstName
-    and ApptDate BETWEEN TO_DATE(:startDate, 'YYYY-MM-DD') and TO_DATE(:endDate, 'YYYY-MM-DD')
+    -- and ApptDateTime BETWEEN TO_TIMESTAMP(:startDate) and TO_TIMESTAMP(:endDate)
 }
 
 }
