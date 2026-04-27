@@ -7,7 +7,7 @@ Class Data.Person Extends %Persistent
     // Family name for the person
     Property FamilyName As %String;
     // Date of Brith
-    Property DOB As %TimeStamp;
+    Property DOB As %Date;
     // What is the scheduling role for this person - CanDrive:1 or not CanDrive:0
     Property CanDrive As %Boolean [ InitialExpression = 0];
 Storage Default
