@@ -39,7 +39,7 @@ Class Data.SampleData Extends %RegisteredObject
         Return sc
     }
 
-    /// Creates some appointments
+    /// Creates some appointments for family
     ClassMethod CreateAppointments() As %Status
     {
         Set sc = $$$OK
