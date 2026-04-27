@@ -13,7 +13,7 @@ Method AddPerson(firstname As %String, lastname As %String, dob As %Date, candri
 }
 
 /// Tool query database for list of appointment for a person
-Query GetAppointments(person As Data.Person, startDate As %Date, endDate As %Date) As %SQLQuery(
+Query GetAppointmentsForPerson(person As Data.Person, startDateTime As %TimeStamp, endDateTime As %TimeSTamp) As %SQLQuery(
     ROWSPEC = "Name:%String,Age:%Integer") [ SqlProc ]
 {
     SELECT ApptName, 
