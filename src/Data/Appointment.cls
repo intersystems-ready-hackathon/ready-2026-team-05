@@ -12,6 +12,8 @@ Class Data.Appointment Extends %Persistent
     Property ApptDate As %Date;
     // What is appointment Time
     Property ApptTime As %Time;
+    // Date and Time for the appointment
+    Property ApptDateTime As %TimeStamp;
     // What is the duration for the appointment in minutes
     Property Duration As %Integer;
     // What is the location name for appointment
@@ -50,6 +52,9 @@ Storage Default
 </Value>
 <Value name="10">
 <Value>ApptDesc</Value>
+</Value>
+<Value name="11">
+<Value>ApptDateTime</Value>
 </Value>
 </Data>
 <DataLocation>^Data.AppointmentD</DataLocation>
