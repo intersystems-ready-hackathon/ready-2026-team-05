@@ -1,12 +1,15 @@
-# TEAM 05 - [ Name of Project ] 
+# TEAM 05 - Family scheduler helper 
 
 ## Project Summary 
 
-[ Add a 1-2 sentence summary of your project here - i,e. what is the high level goal of your project ] 
+As a family member or household organizer, I want an AI agent that reviews everyone's schedules for a given day and identifies conflicts, So that I can proactively resolve clashes, avoid double-bookings, and coordinate the family's time effectively.
 
 ## Technical Details
 
-[ Add details on the technical implementation of your project here ] 
+We have person and appointment classes. 
+Tools:
+GetAppts(Person) - Gets the schedule for a person
+GetSchedule(InitialDate, FinalDate) - Gets the schedule for everyone within the specified date range
 
 ## Setup Instructions [Optional]
 
@@ -15,8 +18,7 @@
 ## Publicly accessible statement
 
 **Delete as appropriate**: 
-- We are happy for our project to be publicly visable after the event (you will remain repo admins) 
-- We would like our project to be made private at the end of the event
+- We are happy for our project to be publicly visable after the event (you will remain repo admins)
 
 
 # Template Instructions (feel free to delete)
