@@ -23,12 +23,12 @@ Query GetAppointmentsForPerson(person As Data.Person, startDateTime As %TimeStam
 }
 
 /// Tool query database for list of appointment for a person
-Query GetAppointmentsForFamily(startDateTime As %TimeStamp, endDateTime As %TimeStamp) As %SQLQuery(
+Query GetAppointmentsForFamily(familyName As %String, startDateTime As %TimeStamp, endDateTime As %TimeStamp) As %SQLQuery(
     ROWSPEC = "Name:%String,Age:%Integer") [ SqlProc ]
 {
     SELECT FirstName, LastName, ApptName, ApptDesc, ApptDateTime, Location, Duration, DrivingTime, CanDrive 
     FROM Data.Appointments
-    Where ApptDateTime BETWEEN startDateTime and endDateTime
+    Where ApptDateTime BETWEEN startDateTime and endDateTime and familyName = familyName
 }
 
 }
