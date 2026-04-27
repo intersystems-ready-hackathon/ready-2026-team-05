@@ -1,5 +1,9 @@
 Class Data.Appointment Extends %Persistent
 {
+    // What is the appointment name
+    Property ApptName As %String;
+    // Appointment description
+    Property ApptDesc As %String;
     // Who is this appointment for
     Property ForPerson As Data.Person;
     // Who is the person that can drive
@@ -40,6 +44,12 @@ Storage Default
 </Value>
 <Value name="8">
 <Value>DrivingTime</Value>
+</Value>
+<Value name="9">
+<Value>ApptName</Value>
+</Value>
+<Value name="10">
+<Value>ApptDesc</Value>
 </Value>
 </Data>
 <DataLocation>^Data.AppointmentD</DataLocation>
