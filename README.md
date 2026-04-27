@@ -8,8 +8,9 @@ As a family member or household organizer, I want an AI agent that reviews every
 
 We have person and appointment classes. 
 Tools:
-GetAppts(Person) - Gets the schedule for a person
-GetSchedule(InitialDate, FinalDate) - Gets the schedule for everyone within the specified date range
+AddPerson(...) - Adds a person to the database
+GetAppointmentsForPerson(Person, StartDate, EndDate) - Gets the schedule for a person within the specified date range
+GetAppointmentsForFamily(FamilyName, InitialDate, FinalDate) - Gets the schedule for family members within the specified date range
 
 ## Setup Instructions [Optional]
 
