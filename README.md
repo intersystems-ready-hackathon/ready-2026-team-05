@@ -14,7 +14,8 @@ GetAppointmentsForFamily(FamilyName, InitialDate, FinalDate) - Gets the schedule
 
 ## Setup Instructions [Optional]
 
-[ If you have time, please add details on how someone else can start using your project here ]
+To setup data:
+w ##class(Data.SampleData).SetupData()
 
 ## Publicly accessible statement
 
