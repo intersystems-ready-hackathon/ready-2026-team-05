@@ -13,13 +13,22 @@ Method AddPerson(firstname As %String, lastname As %String, dob As %Date, candri
 }
 
 /// Tool query database for list of appointment for a person
-Query GetAppointments(person As Data.Person, startDate As %Date, endDate As %Date) As %SQLQuery(
+Query GetAppointmentsForPerson(person As Data.Person, startDateTime As %TimeStamp, endDateTime As %TimeSTamp) As %SQLQuery(
     ROWSPEC = "Name:%String,Age:%Integer") [ SqlProc ]
 {
-    SELECT FirstName, LastName, ApptName, ApptDesc, ApptDate, ApptTime, Location, Duration, DrivingTime, CanDrive 
+    SELECT FirstName, LastName, ApptName, ApptDesc, ApptDateTime, Location, Duration, DrivingTime, CanDrive 
     FROM Data.Appointments
     Where ForPerson = person
-    and ApptDate BETWEEN startDate and endDate
+    and ApptDateTime BETWEEN startDateTime and endDateTime
+}
+
+/// Tool query database for list of appointment for a person
+Query GetAppointmentsForFamily(familyName As %String, startDateTime As %TimeStamp, endDateTime As %TimeStamp) As %SQLQuery(
+    ROWSPEC = "Name:%String,Age:%Integer") [ SqlProc ]
+{
+    SELECT FirstName, LastName, ApptName, ApptDesc, ApptDateTime, Location, Duration, DrivingTime, CanDrive 
+    FROM Data.Appointments
+    Where ApptDateTime BETWEEN startDateTime and endDateTime and familyName = familyName
 }
 
 }

@@ -8,11 +8,7 @@ Class Data.Appointment Extends %Persistent
     Property ForPerson As Data.Person;
     // Who is the person that can drive
     Property DrivingPerson As Data.Person;
-    // What is appointment Date
-    Property ApptDate As %Date;
-    // What is appointment Time
-    Property ApptTime As %Time;
-    // Date and Time for the appointment
+    // What is appointment Date and Time
     Property ApptDateTime As %TimeStamp;
     // What is the duration for the appointment in minutes
     Property Duration As %Integer;
